@@ -1,6 +1,7 @@
 pub mod aws;
 pub mod azure;
 pub mod gcp;
+pub mod token_exchange;
 
 use std::borrow::Cow;
 
@@ -10,6 +11,7 @@ pub use azure::AzureAuth;
 use cookie::Cookie;
 pub use gcp::GcpAuth;
 use secrecy::{ExposeSecret, SecretString};
+pub use token_exchange::TokenExchangeAuth;
 use url::form_urlencoded;
 
 use crate::http::Request;
@@ -42,6 +44,7 @@ pub enum BackendAuth {
 	Aws(aws::AwsAuth),
 	#[serde(rename = "azure")]
 	Azure(azure::AzureAuth),
+	TokenExchange(token_exchange::TokenExchangeAuth),
 }
 
 #[derive(Clone)]
@@ -116,6 +119,31 @@ pub async fn apply_backend_auth(
 			.map_err(ProxyError::BackendAuthenticationFailed)?;
 			req.headers_mut().insert(http::header::AUTHORIZATION, token);
 		},
+		BackendAuth::TokenExchange(te_auth) => {
+			let Some(claims) = req.extensions().get::<Claims>() else {
+				return Err(ProxyError::ProcessingString(
+					"token exchange backend auth requires a validated JWT in the request"
+						.to_string(),
+				));
+			};
+			let subject_token = claims.jwt.expose_secret().to_string();
+			if let Some(access_token) = token_exchange::fetch_token(
+				&backend_info.inputs.upstream,
+				te_auth,
+				&subject_token,
+			)
+			.await
+			.map_err(ProxyError::BackendAuthenticationFailed)?
+			{
+				let mut hv = HeaderValue::from_str(&format!("Bearer {}", access_token.expose_secret()))
+					.map_err(|e| ProxyError::Processing(e.into()))?;
+				hv.set_sensitive(true);
+				req.headers_mut().insert(http::header::AUTHORIZATION, hv);
+			}
+			// On None: token endpoint declined (4xx). Leave Authorization
+			// unset; the upstream returns 401 and the caller can drive a
+			// "link this integration" flow.
+		},
 	}
 	Ok(())
 }
@@ -137,6 +165,7 @@ pub async fn apply_late_backend_auth(
 				.map_err(ProxyError::BackendAuthenticationFailed)?;
 		},
 		BackendAuth::Azure(_) => {},
+		BackendAuth::TokenExchange(_) => {},
 	};
 	Ok(())
 }

@@ -230,6 +230,7 @@ message BackendAuthPolicy {
     Gcp gcp = 3;
     Aws aws = 4;
     Azure azure = 5;
+    TokenExchange token_exchange = 6;
   }
 }
 
@@ -1378,4 +1379,10 @@ message BackendReference {
 
 message Alpn {
   repeated string protocols = 1;
+}
+
+// RFC 8693 OAuth 2.0 Token Exchange.
+message TokenExchange {
+  string token_endpoint = 1;
+  string audience = 2;
 }
