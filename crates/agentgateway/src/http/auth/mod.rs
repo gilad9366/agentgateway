@@ -2,6 +2,7 @@ pub mod aws;
 pub mod azure;
 mod copilot;
 pub mod gcp;
+pub mod token_exchange;
 
 use std::borrow::Cow;
 
@@ -11,6 +12,7 @@ pub use azure::AzureAuth;
 use cookie::Cookie;
 pub use gcp::GcpAuth;
 use secrecy::{ExposeSecret, SecretString};
+pub use token_exchange::{ClientCredentials, TokenExchangeAuth};
 use url::form_urlencoded;
 
 use crate::http::Request;
@@ -45,6 +47,7 @@ pub enum BackendAuth {
 	Azure(azure::AzureAuth),
 	#[serde(rename = "copilot")]
 	Copilot,
+	TokenExchange(token_exchange::TokenExchangeAuth),
 }
 
 /// Records whether the backend auth location was explicitly configured by the user
@@ -149,6 +152,40 @@ pub async fn apply_backend_auth(
 				.await
 				.map_err(ProxyError::BackendAuthenticationFailed)?;
 		},
+		BackendAuth::TokenExchange(te_auth) => {
+			let (subject_token, subject_token_type) =
+				if let Some(claims) = req.extensions().get::<Claims>() {
+					(
+						claims.jwt.expose_secret().to_string(),
+						token_exchange::TOKEN_TYPE_JWT,
+					)
+				} else if let Some(token) = req
+					.headers()
+					.get(http::header::AUTHORIZATION)
+					.and_then(|v| v.to_str().ok())
+					.and_then(|v| {
+						v.strip_prefix("Bearer ")
+							.or_else(|| v.strip_prefix("bearer "))
+					}) {
+					(token.to_string(), token_exchange::TOKEN_TYPE_ACCESS)
+				} else {
+					return Err(ProxyError::ProcessingString(
+						"token exchange backend auth requires a bearer token in the request".to_string(),
+					));
+				};
+			let access_token = token_exchange::fetch_token(
+				&backend_info.inputs.upstream,
+				te_auth,
+				&subject_token,
+				subject_token_type,
+			)
+			.await
+			.map_err(ProxyError::BackendAuthenticationFailed)?;
+			let mut hv = HeaderValue::from_str(&format!("Bearer {}", access_token.expose_secret()))
+				.map_err(|e| ProxyError::Processing(e.into()))?;
+			hv.set_sensitive(true);
+			req.headers_mut().insert(http::header::AUTHORIZATION, hv);
+		},
 	}
 	Ok(())
 }
@@ -171,6 +208,7 @@ pub async fn apply_late_backend_auth(
 		},
 		BackendAuth::Azure(_) => {},
 		BackendAuth::Copilot => {},
+		BackendAuth::TokenExchange(_) => {},
 	};
 	Ok(())
 }

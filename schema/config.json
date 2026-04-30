@@ -2723,6 +2723,18 @@
             "azure"
           ],
           "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tokenExchange": {
+              "$ref": "#/$defs/TokenExchangeAuth"
+            }
+          },
+          "required": [
+            "tokenExchange"
+          ],
+          "additionalProperties": false
         }
       ]
     },
@@ -3022,6 +3034,50 @@
           ],
           "additionalProperties": false
         }
+      ]
+    },
+    "TokenExchangeAuth": {
+      "type": "object",
+      "properties": {
+        "tokenEndpoint": {
+          "description": "RFC 8693 token endpoint URL.",
+          "type": "string"
+        },
+        "audience": {
+          "description": "`audience` parameter identifying the upstream being called.",
+          "type": "string"
+        },
+        "client": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ClientCredentials"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "tokenEndpoint",
+        "audience"
+      ]
+    },
+    "ClientCredentials": {
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "type": "string"
+        },
+        "clientSecret": {
+          "$ref": "#/$defs/FileOrInline"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "clientId",
+        "clientSecret"
       ]
     },
     "HTTP": {

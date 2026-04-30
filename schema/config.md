@@ -286,6 +286,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -390,6 +397,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -494,6 +508,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -596,6 +617,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -734,6 +762,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -838,6 +873,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -940,6 +982,13 @@
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -1063,6 +1112,13 @@
 |`binds[].listeners[].routes[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.localRateLimit`|object|Rate limit incoming requests. State is kept local.|
 |`binds[].listeners[].routes[].policies.localRateLimit.conditional`|[]object|conditional policy entries. An entry without a condition must be the final fallback.|
 |`binds[].listeners[].routes[].policies.localRateLimit.conditional[].condition`|string|condition must evaluate to true for this policy to execute. If unset, the policy is the fallback.|
@@ -1164,6 +1220,13 @@
 |`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.conditional[].policies.http.requestTimeout`|string||
@@ -1280,6 +1343,13 @@
 |`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.remoteRateLimit.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.remoteRateLimit.policies.http.requestTimeout`|string||
@@ -1470,6 +1540,13 @@
 |`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.extAuthz.conditional[].policies.http.requestTimeout`|string||
@@ -1598,6 +1675,13 @@
 |`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.extAuthz.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -1729,6 +1813,13 @@
 |`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.extProc.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.extProc.conditional[].policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.extProc.conditional[].policies.http.requestTimeout`|string||
@@ -1848,6 +1939,13 @@
 |`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].policies.extProc.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].policies.extProc.policies.http.version`|string||
 |`binds[].listeners[].routes[].policies.extProc.policies.http.requestTimeout`|string||
@@ -2031,6 +2129,13 @@
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.http.requestTimeout`|string||
@@ -2166,6 +2271,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.http.requestTimeout`|string||
@@ -2295,6 +2407,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.policies.http.requestTimeout`|string||
@@ -2453,6 +2572,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -2557,6 +2683,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -2661,6 +2794,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -2763,6 +2903,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -2901,6 +3048,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -3005,6 +3159,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -3107,6 +3268,13 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -3270,6 +3438,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.http.requestTimeout`|string||
@@ -3399,6 +3574,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -3557,6 +3739,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -3661,6 +3850,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -3765,6 +3961,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -3867,6 +4070,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -4005,6 +4215,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -4109,6 +4326,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -4211,6 +4435,13 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -4349,6 +4580,13 @@
 |`binds[].listeners[].routes[].backends[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.http.requestTimeout`|string||
@@ -4478,6 +4716,13 @@
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -4636,6 +4881,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -4740,6 +4992,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -4844,6 +5103,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -4946,6 +5212,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -5084,6 +5357,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -5188,6 +5468,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -5290,6 +5577,13 @@
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`binds[].listeners[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -5520,6 +5814,13 @@
 |`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].policies.extAuthz.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].policies.extAuthz.conditional[].policies.http.version`|string||
 |`binds[].listeners[].policies.extAuthz.conditional[].policies.http.requestTimeout`|string||
@@ -5648,6 +5949,13 @@
 |`binds[].listeners[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].policies.extAuthz.policies.http.version`|string||
 |`binds[].listeners[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -5779,6 +6087,13 @@
 |`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].policies.extProc.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].policies.extProc.conditional[].policies.http.version`|string||
 |`binds[].listeners[].policies.extProc.conditional[].policies.http.requestTimeout`|string||
@@ -5898,6 +6213,13 @@
 |`binds[].listeners[].policies.extProc.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`binds[].listeners[].policies.extProc.policies.backendAuth.azure.developerImplicit`|object||
 |`binds[].listeners[].policies.extProc.policies.backendAuth.azure.implicit`|object||
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange`|object||
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange.client`|object||
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`binds[].listeners[].policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`binds[].listeners[].policies.extProc.policies.http`|object|Specify HTTP settings for the backend|
 |`binds[].listeners[].policies.extProc.policies.http.version`|string||
 |`binds[].listeners[].policies.extProc.policies.http.requestTimeout`|string||
@@ -6110,6 +6432,13 @@
 |`frontendPolicies.accessLog.otlp.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`frontendPolicies.accessLog.otlp.policies.backendAuth.azure.developerImplicit`|object||
 |`frontendPolicies.accessLog.otlp.policies.backendAuth.azure.implicit`|object||
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange`|object||
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange.client`|object||
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`frontendPolicies.accessLog.otlp.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`frontendPolicies.accessLog.otlp.policies.http`|object|Specify HTTP settings for the backend|
 |`frontendPolicies.accessLog.otlp.policies.http.version`|string||
 |`frontendPolicies.accessLog.otlp.policies.http.requestTimeout`|string||
@@ -6220,6 +6549,13 @@
 |`frontendPolicies.tracing.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`frontendPolicies.tracing.policies.backendAuth.azure.developerImplicit`|object||
 |`frontendPolicies.tracing.policies.backendAuth.azure.implicit`|object||
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange`|object||
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange.client`|object||
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`frontendPolicies.tracing.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`frontendPolicies.tracing.policies.http`|object|Specify HTTP settings for the backend|
 |`frontendPolicies.tracing.policies.http.version`|string||
 |`frontendPolicies.tracing.policies.http.requestTimeout`|string||
@@ -6461,6 +6797,13 @@
 |`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -6565,6 +6908,13 @@
 |`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -6669,6 +7019,13 @@
 |`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -6771,6 +7128,13 @@
 |`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -6909,6 +7273,13 @@
 |`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -7013,6 +7384,13 @@
 |`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -7115,6 +7493,13 @@
 |`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`policies[].policy.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -7238,6 +7623,13 @@
 |`policies[].policy.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.backendAuth.azure.implicit`|object||
+|`policies[].policy.backendAuth.tokenExchange`|object||
+|`policies[].policy.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.localRateLimit`|object|Rate limit incoming requests. State is kept local.|
 |`policies[].policy.localRateLimit.conditional`|[]object|conditional policy entries. An entry without a condition must be the final fallback.|
 |`policies[].policy.localRateLimit.conditional[].condition`|string|condition must evaluate to true for this policy to execute. If unset, the policy is the fallback.|
@@ -7339,6 +7731,13 @@
 |`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.remoteRateLimit.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.remoteRateLimit.conditional[].policies.http.version`|string||
 |`policies[].policy.remoteRateLimit.conditional[].policies.http.requestTimeout`|string||
@@ -7455,6 +7854,13 @@
 |`policies[].policy.remoteRateLimit.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.remoteRateLimit.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.remoteRateLimit.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.remoteRateLimit.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.remoteRateLimit.policies.http.version`|string||
 |`policies[].policy.remoteRateLimit.policies.http.requestTimeout`|string||
@@ -7645,6 +8051,13 @@
 |`policies[].policy.extAuthz.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.extAuthz.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.extAuthz.conditional[].policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.extAuthz.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.extAuthz.conditional[].policies.http.version`|string||
 |`policies[].policy.extAuthz.conditional[].policies.http.requestTimeout`|string||
@@ -7773,6 +8186,13 @@
 |`policies[].policy.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.extAuthz.policies.http.version`|string||
 |`policies[].policy.extAuthz.policies.http.requestTimeout`|string||
@@ -7904,6 +8324,13 @@
 |`policies[].policy.extProc.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.extProc.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.extProc.conditional[].policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.extProc.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.extProc.conditional[].policies.http.version`|string||
 |`policies[].policy.extProc.conditional[].policies.http.requestTimeout`|string||
@@ -8023,6 +8450,13 @@
 |`policies[].policy.extProc.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`policies[].policy.extProc.policies.backendAuth.azure.developerImplicit`|object||
 |`policies[].policy.extProc.policies.backendAuth.azure.implicit`|object||
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange`|object||
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange.client`|object||
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`policies[].policy.extProc.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`policies[].policy.extProc.policies.http`|object|Specify HTTP settings for the backend|
 |`policies[].policy.extProc.policies.http.version`|string||
 |`policies[].policy.extProc.policies.http.requestTimeout`|string||
@@ -8201,6 +8635,13 @@
 |`backends[].mcp.targets[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].mcp.targets[].policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].mcp.targets[].policies.backendAuth.azure.implicit`|object||
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange`|object||
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange.client`|object||
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].mcp.targets[].policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].mcp.targets[].policies.http.version`|string||
 |`backends[].mcp.targets[].policies.http.requestTimeout`|string||
@@ -8336,6 +8777,13 @@
 |`backends[].ai.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.http.version`|string||
 |`backends[].ai.policies.http.requestTimeout`|string||
@@ -8465,6 +8913,13 @@
 |`backends[].ai.policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.extAuthz.policies.http.version`|string||
 |`backends[].ai.policies.extAuthz.policies.http.requestTimeout`|string||
@@ -8623,6 +9078,13 @@
 |`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -8727,6 +9189,13 @@
 |`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -8831,6 +9300,13 @@
 |`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -8933,6 +9409,13 @@
 |`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -9071,6 +9554,13 @@
 |`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -9175,6 +9665,13 @@
 |`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -9277,6 +9774,13 @@
 |`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -9440,6 +9944,13 @@
 |`backends[].ai.groups[].providers[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.http.requestTimeout`|string||
@@ -9569,6 +10080,13 @@
 |`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.extAuthz.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -9727,6 +10245,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -9831,6 +10356,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -9935,6 +10467,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -10037,6 +10576,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -10175,6 +10721,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -10279,6 +10832,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -10381,6 +10941,13 @@
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -10518,6 +11085,13 @@
 |`backends[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.http.version`|string||
 |`backends[].policies.http.requestTimeout`|string||
@@ -10647,6 +11221,13 @@
 |`backends[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.extAuthz.policies.http.version`|string||
 |`backends[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -10805,6 +11386,13 @@
 |`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -10909,6 +11497,13 @@
 |`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -11013,6 +11608,13 @@
 |`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -11115,6 +11717,13 @@
 |`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -11253,6 +11862,13 @@
 |`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -11357,6 +11973,13 @@
 |`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -11459,6 +12082,13 @@
 |`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -11719,6 +12349,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -11823,6 +12460,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -11927,6 +12571,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -12029,6 +12680,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -12167,6 +12825,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -12271,6 +12936,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -12373,6 +13045,13 @@
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -12496,6 +13175,13 @@
 |`routeGroups[].routes[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.localRateLimit`|object|Rate limit incoming requests. State is kept local.|
 |`routeGroups[].routes[].policies.localRateLimit.conditional`|[]object|conditional policy entries. An entry without a condition must be the final fallback.|
 |`routeGroups[].routes[].policies.localRateLimit.conditional[].condition`|string|condition must evaluate to true for this policy to execute. If unset, the policy is the fallback.|
@@ -12597,6 +13283,13 @@
 |`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.http.version`|string||
 |`routeGroups[].routes[].policies.remoteRateLimit.conditional[].policies.http.requestTimeout`|string||
@@ -12713,6 +13406,13 @@
 |`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.remoteRateLimit.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.remoteRateLimit.policies.http.version`|string||
 |`routeGroups[].routes[].policies.remoteRateLimit.policies.http.requestTimeout`|string||
@@ -12903,6 +13603,13 @@
 |`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.extAuthz.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.extAuthz.conditional[].policies.http.version`|string||
 |`routeGroups[].routes[].policies.extAuthz.conditional[].policies.http.requestTimeout`|string||
@@ -13031,6 +13738,13 @@
 |`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.extAuthz.policies.http.version`|string||
 |`routeGroups[].routes[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -13162,6 +13876,13 @@
 |`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.extProc.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.extProc.conditional[].policies.http.version`|string||
 |`routeGroups[].routes[].policies.extProc.conditional[].policies.http.requestTimeout`|string||
@@ -13281,6 +14002,13 @@
 |`routeGroups[].routes[].policies.extProc.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].policies.extProc.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].policies.extProc.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].policies.extProc.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].policies.extProc.policies.http.version`|string||
 |`routeGroups[].routes[].policies.extProc.policies.http.requestTimeout`|string||
@@ -13464,6 +14192,13 @@
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.http.version`|string||
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.http.requestTimeout`|string||
@@ -13599,6 +14334,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.http.requestTimeout`|string||
@@ -13728,6 +14470,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.policies.http.requestTimeout`|string||
@@ -13886,6 +14635,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -13990,6 +14746,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -14094,6 +14857,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -14196,6 +14966,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -14334,6 +15111,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -14438,6 +15222,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -14540,6 +15331,13 @@
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -14703,6 +15501,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.http.requestTimeout`|string||
@@ -14832,6 +15637,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -14990,6 +15802,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -15094,6 +15913,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -15198,6 +16024,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -15300,6 +16133,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -15438,6 +16278,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -15542,6 +16389,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -15644,6 +16498,13 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -15782,6 +16643,13 @@
 |`routeGroups[].routes[].backends[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.http.requestTimeout`|string||
@@ -15911,6 +16779,13 @@
 |`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.extAuthz.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.extAuthz.policies.http.requestTimeout`|string||
@@ -16069,6 +16944,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -16173,6 +17055,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -16277,6 +17166,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -16379,6 +17275,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -16517,6 +17420,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -16621,6 +17531,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -16723,6 +17640,13 @@
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`routeGroups[].routes[].backends[].policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -16869,6 +17793,13 @@
 |`llm.models[].auth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].auth.azure.developerImplicit`|object||
 |`llm.models[].auth.azure.implicit`|object||
+|`llm.models[].auth.tokenExchange`|object||
+|`llm.models[].auth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].auth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].auth.tokenExchange.client`|object||
+|`llm.models[].auth.tokenExchange.client.clientId`|string||
+|`llm.models[].auth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].auth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].health`|object|health configures outlier detection for this model backend.|
 |`llm.models[].health.unhealthyExpression`|string|CEL expression; `true` means unhealthy (evict). E.g. `response.code >= 500`.<br>When unset, any 5xx or connection failure is treated as unhealthy.|
 |`llm.models[].health.eviction`|object|Local/config eviction sub-policy with duration as string; mirrors `Eviction`.|
@@ -16987,6 +17918,13 @@
 |`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.request[].openAIModeration.policies.http.version`|string||
 |`llm.models[].guardrails.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -17091,6 +18029,13 @@
 |`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.request[].bedrockGuardrails.policies.http.version`|string||
 |`llm.models[].guardrails.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -17195,6 +18140,13 @@
 |`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.request[].googleModelArmor.policies.http.version`|string||
 |`llm.models[].guardrails.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -17297,6 +18249,13 @@
 |`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.request[].azureContentSafety.policies.http.version`|string||
 |`llm.models[].guardrails.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -17435,6 +18394,13 @@
 |`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.response[].bedrockGuardrails.policies.http.version`|string||
 |`llm.models[].guardrails.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -17539,6 +18505,13 @@
 |`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.response[].googleModelArmor.policies.http.version`|string||
 |`llm.models[].guardrails.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -17641,6 +18614,13 @@
 |`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.models[].guardrails.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.models[].guardrails.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.models[].guardrails.response[].azureContentSafety.policies.http.version`|string||
 |`llm.models[].guardrails.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -17814,6 +18794,13 @@
 |`llm.policies.extAuthz.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.policies.extAuthz.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`llm.policies.extAuthz.conditional[].policies.backendAuth.azure.implicit`|object||
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange`|object||
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.policies.extAuthz.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`llm.policies.extAuthz.conditional[].policies.http.version`|string||
 |`llm.policies.extAuthz.conditional[].policies.http.requestTimeout`|string||
@@ -17942,6 +18929,13 @@
 |`llm.policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.policies.extAuthz.policies.http.version`|string||
 |`llm.policies.extAuthz.policies.http.requestTimeout`|string||
@@ -18073,6 +19067,13 @@
 |`llm.policies.extProc.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.policies.extProc.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`llm.policies.extProc.conditional[].policies.backendAuth.azure.implicit`|object||
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange`|object||
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.policies.extProc.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`llm.policies.extProc.conditional[].policies.http.version`|string||
 |`llm.policies.extProc.conditional[].policies.http.requestTimeout`|string||
@@ -18192,6 +19193,13 @@
 |`llm.policies.extProc.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.policies.extProc.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.policies.extProc.policies.backendAuth.azure.implicit`|object||
+|`llm.policies.extProc.policies.backendAuth.tokenExchange`|object||
+|`llm.policies.extProc.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.policies.extProc.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.policies.extProc.policies.backendAuth.tokenExchange.client`|object||
+|`llm.policies.extProc.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.policies.extProc.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.policies.extProc.policies.http.version`|string||
 |`llm.policies.extProc.policies.http.requestTimeout`|string||
@@ -18377,6 +19385,13 @@
 |`llm.policies.remoteRateLimit.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`llm.policies.remoteRateLimit.policies.backendAuth.azure.developerImplicit`|object||
 |`llm.policies.remoteRateLimit.policies.backendAuth.azure.implicit`|object||
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange`|object||
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client`|object||
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`llm.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`llm.policies.remoteRateLimit.policies.http`|object|Specify HTTP settings for the backend|
 |`llm.policies.remoteRateLimit.policies.http.version`|string||
 |`llm.policies.remoteRateLimit.policies.http.requestTimeout`|string||
@@ -18512,6 +19527,13 @@
 |`mcp.targets[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.targets[].policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.targets[].policies.backendAuth.azure.implicit`|object||
+|`mcp.targets[].policies.backendAuth.tokenExchange`|object||
+|`mcp.targets[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.targets[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.targets[].policies.backendAuth.tokenExchange.client`|object||
+|`mcp.targets[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.targets[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.targets[].policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.targets[].policies.http.version`|string||
 |`mcp.targets[].policies.http.requestTimeout`|string||
@@ -18722,6 +19744,13 @@
 |`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.request[].openAIModeration.policies.http.requestTimeout`|string||
@@ -18826,6 +19855,13 @@
 |`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.request[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -18930,6 +19966,13 @@
 |`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.request[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -19032,6 +20075,13 @@
 |`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.request[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -19170,6 +20220,13 @@
 |`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.response[].bedrockGuardrails.policies.http.requestTimeout`|string||
@@ -19274,6 +20331,13 @@
 |`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.response[].googleModelArmor.policies.http.requestTimeout`|string||
@@ -19376,6 +20440,13 @@
 |`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.http.version`|string||
 |`mcp.policies.ai.promptGuard.response[].azureContentSafety.policies.http.requestTimeout`|string||
@@ -19499,6 +20570,13 @@
 |`mcp.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.localRateLimit`|object|Rate limit incoming requests. State is kept local.|
 |`mcp.policies.localRateLimit.conditional`|[]object|conditional policy entries. An entry without a condition must be the final fallback.|
 |`mcp.policies.localRateLimit.conditional[].condition`|string|condition must evaluate to true for this policy to execute. If unset, the policy is the fallback.|
@@ -19600,6 +20678,13 @@
 |`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.remoteRateLimit.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.remoteRateLimit.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.remoteRateLimit.conditional[].policies.http.version`|string||
 |`mcp.policies.remoteRateLimit.conditional[].policies.http.requestTimeout`|string||
@@ -19716,6 +20801,13 @@
 |`mcp.policies.remoteRateLimit.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.remoteRateLimit.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.remoteRateLimit.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.remoteRateLimit.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.remoteRateLimit.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.remoteRateLimit.policies.http.version`|string||
 |`mcp.policies.remoteRateLimit.policies.http.requestTimeout`|string||
@@ -19906,6 +20998,13 @@
 |`mcp.policies.extAuthz.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.extAuthz.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.extAuthz.conditional[].policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.extAuthz.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.extAuthz.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.extAuthz.conditional[].policies.http.version`|string||
 |`mcp.policies.extAuthz.conditional[].policies.http.requestTimeout`|string||
@@ -20034,6 +21133,13 @@
 |`mcp.policies.extAuthz.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.extAuthz.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.extAuthz.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.extAuthz.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.extAuthz.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.extAuthz.policies.http.version`|string||
 |`mcp.policies.extAuthz.policies.http.requestTimeout`|string||
@@ -20165,6 +21271,13 @@
 |`mcp.policies.extProc.conditional[].policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.extProc.conditional[].policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.extProc.conditional[].policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.extProc.conditional[].policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.extProc.conditional[].policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.extProc.conditional[].policies.http.version`|string||
 |`mcp.policies.extProc.conditional[].policies.http.requestTimeout`|string||
@@ -20284,6 +21397,13 @@
 |`mcp.policies.extProc.policies.backendAuth.azure.explicitConfig.workloadIdentity`|object||
 |`mcp.policies.extProc.policies.backendAuth.azure.developerImplicit`|object||
 |`mcp.policies.extProc.policies.backendAuth.azure.implicit`|object||
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange`|object||
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange.tokenEndpoint`|string|RFC 8693 token endpoint URL.|
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange.audience`|string|`audience` parameter identifying the upstream being called.|
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange.client`|object||
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange.client.clientId`|string||
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret`|object||
+|`mcp.policies.extProc.policies.backendAuth.tokenExchange.client.clientSecret.file`|string||
 |`mcp.policies.extProc.policies.http`|object|Specify HTTP settings for the backend|
 |`mcp.policies.extProc.policies.http.version`|string||
 |`mcp.policies.extProc.policies.http.requestTimeout`|string||
