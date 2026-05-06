@@ -9,9 +9,10 @@ use http::request::Parts;
 use itertools::Itertools;
 use rmcp::ErrorData;
 use rmcp::model::{
-	ClientNotification, ClientRequest, Implementation, JsonRpcNotification, JsonRpcRequest,
-	ListPromptsResult, ListResourceTemplatesResult, ListResourcesResult, ListToolsResult,
-	ProtocolVersion, RequestId, ServerCapabilities, ServerInfo, ServerJsonRpcMessage, ServerResult,
+	ClientNotification, ClientRequest, Implementation, InitializeRequest, JsonRpcNotification,
+	JsonRpcRequest, ListPromptsResult, ListResourceTemplatesResult, ListResourcesResult,
+	ListToolsResult, ProtocolVersion, RequestId, ServerCapabilities, ServerInfo,
+	ServerJsonRpcMessage, ServerResult,
 };
 use tracing::{debug, warn};
 
@@ -386,6 +387,39 @@ impl Relay {
 
 		messages_to_response(id, stream, mcp_log)
 	}
+
+	pub async fn preflight_init_pending(
+		&self,
+		template: &InitializeRequest,
+		ctx: &IncomingRequestContext,
+	) {
+		for (name, con) in self.upstreams.iter_named() {
+			if con.get_session_state().and_then(|s| s.session).is_some() {
+				continue;
+			}
+			let req = JsonRpcRequest::new(
+				RequestId::Number(0),
+				ClientRequest::InitializeRequest(template.clone()),
+			);
+			if let Err(e) = self.send_single(req, ctx.clone(), name.as_str(), None).await {
+				debug!("preflight init failed for target {}: {}", name, e);
+				continue;
+			}
+			let initialized = rmcp::model::InitializedNotification {
+				method: Default::default(),
+				extensions: Default::default(),
+			};
+			if let Err(e) = self
+				.send_notification_single(initialized.into(), ctx.clone(), name.as_str())
+				.await
+			{
+				debug!(
+					"preflight initialized notification failed for target {}: {}",
+					name, e
+				);
+			}
+		}
+	}
 	// For some requests, we don't have a sane mapping of incoming requests to a specific
 	// downstream service when multiplexing. Only forward when we have only one backend.
 	pub async fn send_single_without_multiplexing(
@@ -543,6 +577,7 @@ impl Relay {
 			// Resources are now supported with multiplexing using proper URI prefixing
 			ServerCapabilities::builder()
 				.enable_tools()
+				.enable_tool_list_changed()
 				.enable_resources()
 				.build()
 		} else {
