@@ -276,6 +276,83 @@ async fn stateless_multiplex_does_not_advertise_resource_subscribe() {
 }
 
 #[tokio::test]
+async fn tools_list_lazily_initializes_failed_target() {
+	let mock_a = mock_streamable_http_server(true).await;
+	let (mock_b, allow_b) = mock_gated_streamable_http_server(true).await;
+	let t = setup_proxy_test("{}")
+		.unwrap()
+		.with_multiplex_mcp_backend_mode(
+			"mcp",
+			vec![("a", mock_a.addr, false), ("b", mock_b.addr, false)],
+			true,
+			FailureMode::FailOpen,
+		)
+		.with_bind(simple_bind())
+		.with_route(basic_named_route(strng::new("/mcp")));
+	let io = t.serve_real_listener(strng::new("bind")).await;
+	let client = mcp_streamable_client(io).await;
+
+	let tools = client.list_tools(None).await.unwrap();
+	assert!(tools.tools.iter().all(|t| t.name.starts_with("a_")));
+
+	// "User links the OAuth integration": b now accepts requests.
+	allow_b.store(true, std::sync::atomic::Ordering::Relaxed);
+
+	let tools = client.list_tools(None).await.unwrap();
+	assert!(tools.tools.iter().any(|t| t.name.starts_with("b_")));
+	assert_eq!(mock_b.init_count().await, 1);
+}
+
+#[tokio::test]
+async fn tools_list_does_not_reinitialize_targets_with_sessions() {
+	let mock_a = mock_streamable_http_server(true).await;
+	let mock_b = mock_streamable_http_server(true).await;
+	let t = setup_proxy_test("{}")
+		.unwrap()
+		.with_multiplex_mcp_backend_mode(
+			"mcp",
+			vec![("a", mock_a.addr, false), ("b", mock_b.addr, false)],
+			true,
+			FailureMode::FailOpen,
+		)
+		.with_bind(simple_bind())
+		.with_route(basic_named_route(strng::new("/mcp")));
+	let io = t.serve_real_listener(strng::new("bind")).await;
+	let client = mcp_streamable_client(io).await;
+
+	client.list_tools(None).await.unwrap();
+	client.list_tools(None).await.unwrap();
+	assert_eq!(mock_a.init_count().await, 1);
+	assert_eq!(mock_b.init_count().await, 1);
+}
+
+#[tokio::test]
+async fn sse_frontend_tools_list_lazily_initializes_failed_target() {
+	let mock_a = mock_streamable_http_server(true).await;
+	let (mock_b, allow_b) = mock_gated_streamable_http_server(true).await;
+	let t = setup_proxy_test("{}")
+		.unwrap()
+		.with_multiplex_mcp_backend_mode(
+			"mcp",
+			vec![("a", mock_a.addr, false), ("b", mock_b.addr, false)],
+			true,
+			FailureMode::FailOpen,
+		)
+		.with_bind(simple_bind())
+		.with_route(basic_named_route(strng::new("/mcp")));
+	let io = t.serve_real_listener(strng::new("bind")).await;
+	let client = mcp_sse_client(io).await;
+
+	let tools = client.list_tools(None).await.unwrap();
+	assert!(tools.tools.iter().all(|t| t.name.starts_with("a_")));
+
+	allow_b.store(true, std::sync::atomic::Ordering::Relaxed);
+
+	let tools = client.list_tools(None).await.unwrap();
+	assert!(tools.tools.iter().any(|t| t.name.starts_with("b_")));
+}
+
+#[tokio::test]
 async fn stateless_multiplex_tool_call_initializes_only_target() {
 	let mock_a = mock_streamable_http_server(true).await;
 	let mock_b = mock_streamable_http_server(true).await;
@@ -1653,6 +1730,68 @@ async fn mock_streamable_http_server_inner(
 		init_counter,
 		_cancel: tx,
 	}
+}
+
+/// Like `mock_streamable_http_server`, but rejects every request with 401
+/// until the returned gate is set, simulating an upstream that requires
+/// per-user auth the user has not granted yet.
+async fn mock_gated_streamable_http_server(
+	stateful: bool,
+) -> (MockServer, std::sync::Arc<std::sync::atomic::AtomicBool>) {
+	use mockserver::Counter;
+	use rmcp::transport::streamable_http_server::StreamableHttpService;
+	use rmcp::transport::streamable_http_server::session::local::LocalSessionManager;
+	agent_core::telemetry::testing::setup_test_logging();
+	let init_counter = std::sync::Arc::new(tokio::sync::Mutex::new(0_i32));
+	let allow = std::sync::Arc::new(std::sync::atomic::AtomicBool::new(false));
+
+	let service = StreamableHttpService::new(
+		{
+			let init_counter = init_counter.clone();
+			move || Ok(Counter::new(init_counter.clone()))
+		},
+		LocalSessionManager::default().into(),
+		StreamableHttpServerConfig::default()
+			.with_sse_retry(None)
+			.with_sse_keep_alive(None)
+			.with_stateful_mode(stateful)
+			.with_json_response(false),
+	);
+
+	let (tx, rx) = tokio::sync::oneshot::channel();
+	let gate = allow.clone();
+	let router = axum::Router::new()
+		.nest_service("/mcp", service)
+		.layer(axum::middleware::from_fn(
+			move |req: axum::extract::Request, next: axum::middleware::Next| {
+				let gate = gate.clone();
+				async move {
+					use axum::response::IntoResponse;
+					if gate.load(std::sync::atomic::Ordering::Relaxed) {
+						next.run(req).await
+					} else {
+						http::StatusCode::UNAUTHORIZED.into_response()
+					}
+				}
+			},
+		));
+	let tcp_listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+	let addr = tcp_listener.local_addr().unwrap();
+	tokio::spawn(async move {
+		let _ = axum::serve(tcp_listener, router)
+			.with_graceful_shutdown(async {
+				let _ = rx.await;
+			})
+			.await;
+	});
+	(
+		MockServer {
+			addr,
+			init_counter,
+			_cancel: tx,
+		},
+		allow,
+	)
 }
 
 async fn mock_sse_server() -> MockServer {

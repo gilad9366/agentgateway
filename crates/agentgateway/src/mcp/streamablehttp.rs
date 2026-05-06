@@ -145,7 +145,7 @@ impl StreamableHttpService {
 				return mcp::Error::UnknownSession.into();
 			};
 
-			return Box::pin(session.send(part, message)).await;
+			return Box::pin(session.send_with_recovery(part, message)).await;
 		}
 
 		// No session header... we need to create one, if it is an initialize.

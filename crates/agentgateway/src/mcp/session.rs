@@ -48,6 +48,20 @@ const SESSION_REAP_INTERVAL: Duration = Duration::from_secs(30);
 
 impl Session {
 	/// send a message to upstream server(s)
+	pub async fn send_with_recovery(
+		&mut self,
+		parts: Parts,
+		message: ClientJsonRpcMessage,
+	) -> Result<Response, ProxyError> {
+		if let ClientJsonRpcMessage::Request(r) = &message
+			&& matches!(r.request, ClientRequest::ListToolsRequest(_))
+		{
+			let ctx = IncomingRequestContext::new(&parts);
+			self.relay.recover_failed_targets(&ctx).await;
+		}
+		self.send(parts, message).await
+	}
+
 	pub async fn send(
 		&mut self,
 		parts: Parts,
@@ -880,7 +894,7 @@ impl sse_stream::Timer for TokioSseTimer {
 	}
 }
 
-fn get_client_info() -> ClientInfo {
+pub(crate) fn get_client_info() -> ClientInfo {
 	let mut client_info = ClientInfo::default();
 	client_info.protocol_version = ProtocolVersion::V_2025_11_25;
 	client_info.capabilities = rmcp::model::ClientCapabilities::default();

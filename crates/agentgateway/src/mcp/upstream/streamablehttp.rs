@@ -18,11 +18,57 @@ use crate::mcp::streamablehttp::StreamableHttpPostResponse;
 use crate::mcp::upstream::IncomingRequestContext;
 use crate::*;
 
+const RECOVERY_BACKOFF_BASE: std::time::Duration = std::time::Duration::from_secs(1);
+const RECOVERY_BACKOFF_MAX: std::time::Duration = std::time::Duration::from_secs(30);
+
+#[derive(Debug)]
+struct Backoff {
+	failures: u32,
+	next_retry: tokio::time::Instant,
+}
+
+/// Per-target retry backoff for `tools/list` recovery, so a permanently-broken
+/// streamable target is not re-handshaked on every request.
+#[derive(Clone, Debug, Default)]
+struct RecoveryBackoff(AtomicOption<Backoff>);
+
+impl RecoveryBackoff {
+	fn due(&self) -> bool {
+		self
+			.0
+			.load()
+			.as_deref()
+			.is_none_or(|b| tokio::time::Instant::now() >= b.next_retry)
+	}
+
+	fn record_failure(&self) {
+		let failures = self.0.load().as_deref().map_or(0, |b| b.failures) + 1;
+		// The first failure retries immediately so a transient failure (e.g. auth not
+		// yet granted) recovers on the next request; repeated failures back off.
+		let delay = if failures < 2 {
+			std::time::Duration::ZERO
+		} else {
+			RECOVERY_BACKOFF_BASE
+				.saturating_mul(1u32 << (failures - 2).min(5))
+				.min(RECOVERY_BACKOFF_MAX)
+		};
+		self.0.store(Some(Arc::new(Backoff {
+			failures,
+			next_retry: tokio::time::Instant::now() + delay,
+		})));
+	}
+
+	fn reset(&self) {
+		self.0.store(None);
+	}
+}
+
 #[derive(Clone, Debug)]
 pub struct Client {
 	http_client: super::McpHttpClient,
 	uri: Uri,
 	session_id: AtomicOption<String>,
+	recovery_backoff: RecoveryBackoff,
 }
 
 impl Client {
@@ -32,7 +78,23 @@ impl Client {
 			http_client,
 			uri: ("http://".to_string() + &hp + path.as_str()).parse()?,
 			session_id: Default::default(),
+			recovery_backoff: Default::default(),
 		})
+	}
+
+	/// Whether a failed target is eligible for another recovery handshake now.
+	pub fn recovery_due(&self) -> bool {
+		self.recovery_backoff.due()
+	}
+
+	/// Record a failed recovery, pushing the next attempt out exponentially.
+	pub fn record_recovery_failure(&self) {
+		self.recovery_backoff.record_failure();
+	}
+
+	/// Clear backoff after a successful recovery.
+	pub fn reset_recovery_backoff(&self) {
+		self.recovery_backoff.reset();
 	}
 
 	pub fn get_session_state(&self) -> http::sessionpersistence::MCPSession {
@@ -219,5 +281,41 @@ impl Client {
 			);
 		}
 		Ok(())
+	}
+}
+
+#[cfg(test)]
+mod tests {
+	use std::time::Duration;
+
+	use super::*;
+
+	#[tokio::test(start_paused = true)]
+	async fn recovery_backoff_grows_and_resets() {
+		let b = RecoveryBackoff::default();
+		assert!(b.due(), "a fresh target is immediately eligible");
+
+		// First failure keeps the target immediately eligible (fast transient recovery).
+		b.record_failure();
+		assert!(b.due(), "first failure still allows an immediate retry");
+
+		// Second consecutive failure backs off by the base window.
+		b.record_failure();
+		assert!(
+			!b.due(),
+			"second failure is not eligible within the base window"
+		);
+		tokio::time::advance(Duration::from_secs(1)).await;
+		assert!(b.due(), "eligible once the base window elapses");
+
+		// Third consecutive failure backs off further (2s, not 1s).
+		b.record_failure();
+		tokio::time::advance(Duration::from_secs(1)).await;
+		assert!(!b.due(), "third window is longer than the base");
+		tokio::time::advance(Duration::from_secs(1)).await;
+		assert!(b.due(), "eligible once the longer window elapses");
+
+		b.reset();
+		assert!(b.due(), "reset clears the backoff");
 	}
 }

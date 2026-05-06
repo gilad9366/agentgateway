@@ -166,6 +166,26 @@ impl Upstream {
 		}
 	}
 
+	/// Whether a failed streamable target is eligible for another recovery attempt.
+	pub fn recovery_due(&self) -> bool {
+		match self {
+			Upstream::McpStreamable(c) => c.recovery_due(),
+			_ => true,
+		}
+	}
+
+	pub fn record_recovery_failure(&self) {
+		if let Upstream::McpStreamable(c) = self {
+			c.record_recovery_failure();
+		}
+	}
+
+	pub fn reset_recovery_backoff(&self) {
+		if let Upstream::McpStreamable(c) = self {
+			c.reset_recovery_backoff();
+		}
+	}
+
 	pub(crate) async fn delete(&self, ctx: &IncomingRequestContext) -> Result<(), UpstreamError> {
 		match &self {
 			Upstream::McpStdio(c) => {

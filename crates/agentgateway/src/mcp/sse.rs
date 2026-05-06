@@ -71,7 +71,7 @@ impl LegacySSEService {
 		// Here, we wait until the InitializeRequest is sent, and then establish the GET stream once it is.
 		let is_init = matches!(&message, ClientJsonRpcMessage::Request(r) if matches!(&r.request, &ClientRequest::InitializeRequest(_)));
 		let init_parts = if is_init { Some(part.clone()) } else { None };
-		let resp = session.send(part, message).await?;
+		let resp = session.send_with_recovery(part, message).await?;
 		if is_init {
 			trace!("received initialize request, establishing get stream");
 			let get_stream = session.get_stream(init_parts.unwrap()).await?;

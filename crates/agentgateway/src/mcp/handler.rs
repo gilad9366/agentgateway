@@ -10,10 +10,10 @@ use http::request::Parts;
 use itertools::Itertools;
 use rmcp::ErrorData;
 use rmcp::model::{
-	ClientNotification, ClientRequest, Implementation, JsonRpcNotification, JsonRpcRequest,
-	ListPromptsResult, ListResourceTemplatesResult, ListResourcesResult, ListToolsResult,
-	ProtocolVersion, RequestId, ServerCapabilities, ServerInfo, ServerJsonRpcMessage,
-	ServerNotification, ServerResult,
+	ClientNotification, ClientRequest, Implementation, InitializeRequest, JsonRpcNotification,
+	JsonRpcRequest, ListPromptsResult, ListResourceTemplatesResult, ListResourcesResult,
+	ListToolsResult, ProtocolVersion, RequestId, ServerCapabilities, ServerInfo,
+	ServerJsonRpcMessage, ServerNotification, ServerResult,
 };
 use tracing::{debug, warn};
 
@@ -547,6 +547,68 @@ impl Relay {
 				messages_to_response(id, wrap_with_guardrails(stream, guardrails), mcp_log)
 			},
 			None => messages_to_response(id, stream, mcp_log),
+		}
+	}
+
+	pub async fn recover_failed_targets(&self, ctx: &IncomingRequestContext) {
+		const INIT_REQUEST_ID: i64 = 0;
+		// Bound recovery so an unresponsive target cannot stall every tools/list.
+		const RECOVERY_TIMEOUT: std::time::Duration = std::time::Duration::from_secs(5);
+		// FailClosed sessions cannot exist with a failed target; nothing to recover.
+		if self.upstreams.failure_mode != FailureMode::FailOpen {
+			return;
+		}
+		let futs: Vec<_> = self
+			.upstreams
+			.iter_named()
+			// Only streamable HTTP targets can fail initialize per-request (e.g. auth)
+			// and recover later; no session id means failed-init or stateless, and both
+			// tolerate a re-initialize.
+			.filter(|(_, con)| {
+				matches!(con.as_ref(), upstream::Upstream::McpStreamable(c) if !c.has_session_id())
+					&& con.recovery_due()
+			})
+			.map(|(name, con)| async move {
+				let init = InitializeRequest::new(crate::mcp::session::get_client_info());
+				let req = JsonRpcRequest::new(
+					RequestId::Number(INIT_REQUEST_ID),
+					ClientRequest::InitializeRequest(init),
+				);
+				if let Err(e) = self
+					.send_single(req, ctx.clone(), name.as_str(), None)
+					.await
+				{
+					con.record_recovery_failure();
+					debug!("recovery initialize failed for target {}: {}", name, e);
+					return;
+				}
+				let initialized = rmcp::model::InitializedNotification {
+					method: Default::default(),
+					extensions: Default::default(),
+				};
+				if let Err(e) = self
+					.send_notification_single(initialized.into(), ctx.clone(), name.as_str())
+					.await
+				{
+					// initialize set the session id, but the upstream never saw
+					// initialized; clear it so the next tools/list retries the full
+					// handshake instead of treating the target as recovered.
+					con.set_session_id(None, None);
+					con.record_recovery_failure();
+					debug!(
+						"recovery initialized notification failed for target {}: {}",
+						name, e
+					);
+					return;
+				}
+				con.reset_recovery_backoff();
+			})
+			.collect();
+		if tokio::time::timeout(RECOVERY_TIMEOUT, futures::future::join_all(futs))
+			.await
+			.is_err()
+		{
+			debug!("target recovery timed out");
 		}
 	}
 	pub async fn send_fanout_deletion(
