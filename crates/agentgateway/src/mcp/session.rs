@@ -34,6 +34,7 @@ pub struct Session {
 	relay: Arc<Relay>,
 	pub id: Arc<str>,
 	tx: Option<Sender<ServerJsonRpcMessage>>,
+	init_request: Option<InitializeRequest>,
 }
 
 #[derive(Debug, Clone)]
@@ -363,6 +364,7 @@ impl Session {
 				match &mut r.request {
 					ClientRequest::InitializeRequest(ir) => {
 						self.strip_unsupported_client_capabilities(&mut ir.params.capabilities);
+						self.init_request = Some(ir.clone());
 
 						let pv = ir.params.protocol_version.clone();
 						let res = self
@@ -386,6 +388,9 @@ impl Session {
 						res
 					},
 					ClientRequest::ListToolsRequest(_) => {
+						if let Some(template) = &self.init_request {
+							self.relay.preflight_init_pending(template, &ctx).await;
+						}
 						self
 							.relay
 							.send_fanout(r, ctx, self.relay.merge_tools(cel))
@@ -627,6 +632,7 @@ impl SessionManager {
 			relay: Arc::new(relay),
 			tx: None,
 			encoder: self.encoder.clone(),
+			init_request: None,
 		};
 		let mut sm = self.sessions.write().expect("write lock");
 		sm.insert(
@@ -650,6 +656,7 @@ impl SessionManager {
 			relay: Arc::new(relay),
 			tx: None,
 			encoder: self.encoder.clone(),
+			init_request: None,
 		}
 	}
 
@@ -676,6 +683,7 @@ impl SessionManager {
 			relay: Arc::new(relay),
 			tx: None,
 			encoder: self.encoder.clone(),
+			init_request: None,
 		}
 	}
 
@@ -693,6 +701,7 @@ impl SessionManager {
 			relay: Arc::new(relay),
 			tx: Some(tx),
 			encoder: self.encoder.clone(),
+			init_request: None,
 		};
 		let mut sm = self.sessions.write().expect("write lock");
 		sm.insert(
