@@ -7,18 +7,32 @@ use vector_map::VecMap;
 
 use crate::cel::ContextBuilder;
 use crate::http::authorization::{RuleSet, RuleSets};
+use crate::mcp::direct_response::{DirectResponse, DirectResponseRule};
 use crate::*;
 
 #[apply(schema!)]
-pub struct McpAuthorization(RuleSet);
+pub struct McpAuthorization {
+	#[serde(flatten)]
+	pub rule_set: RuleSet,
+	#[serde(default, skip_serializing_if = "Vec::is_empty")]
+	pub direct_response: Vec<DirectResponseRule>,
+}
 
 impl McpAuthorization {
 	pub fn new(rule_set: RuleSet) -> Self {
-		Self(rule_set)
+		Self {
+			rule_set,
+			direct_response: Vec::new(),
+		}
 	}
 
-	pub fn into_inner(self) -> RuleSet {
-		self.0
+	pub fn with_direct_response(mut self, direct_response: Vec<DirectResponseRule>) -> Self {
+		self.direct_response = direct_response;
+		self
+	}
+
+	pub fn into_parts(self) -> (RuleSet, Vec<DirectResponseRule>) {
+		(self.rule_set, self.direct_response)
 	}
 }
 
@@ -31,25 +45,77 @@ impl CelExecWrapper {
 		CelExecWrapper(Arc::new(req))
 	}
 }
+
 #[derive(Clone, Debug)]
-pub struct McpAuthorizationSet(RuleSets);
+pub enum McpDecision {
+	Allow,
+	Deny,
+}
+
+#[derive(Clone, Debug)]
+pub struct McpAuthorizationSet {
+	rule_sets: RuleSets,
+	direct_response: Vec<DirectResponseRule>,
+}
 
 impl McpAuthorizationSet {
-	pub fn new(rs: RuleSets) -> Self {
-		Self(rs)
+	pub fn new(rule_sets: RuleSets) -> Self {
+		Self {
+			rule_sets,
+			direct_response: Vec::new(),
+		}
 	}
+
+	pub fn with_direct_response(mut self, direct_response: Vec<DirectResponseRule>) -> Self {
+		self.direct_response = direct_response;
+		self
+	}
+
 	pub fn validate(&self, res: &ResourceType, cel: &CelExecWrapper) -> bool {
-		if !self.0.has_rules() {
+		if !self.rule_sets.has_rules() {
 			return true;
 		}
 		tracing::debug!("Checking RBAC for resource: {:?}", res);
 		let mcp = crate::mcp::MCPInfo::from(res);
 		let exec = crate::cel::Executor::new_mcp_request(cel.0.as_ref(), &mcp);
-		self.0.validate(&exec)
+		self.rule_sets.validate(&exec)
+	}
+
+	pub fn evaluate(&self, res: &ResourceType, cel: &CelExecWrapper) -> McpDecision {
+		tracing::debug!("Evaluating MCP authorization for resource: {:?}", res);
+		let mcp = crate::mcp::MCPInfo::from(res);
+		let exec = crate::cel::Executor::new_mcp_request(cel.0.as_ref(), &mcp);
+		if self.rule_sets.validate(&exec) {
+			McpDecision::Allow
+		} else {
+			McpDecision::Deny
+		}
+	}
+
+	/// Direct-response rules only apply to `tools/call`. The first matching
+	/// rule short-circuits the request with the configured `CallToolResult`.
+	pub fn direct_response_for_tool(
+		&self,
+		res: &ResourceType,
+		cel: &CelExecWrapper,
+	) -> Option<DirectResponse> {
+		if !matches!(res, ResourceType::Tool(_)) {
+			return None;
+		}
+		let mcp = crate::mcp::MCPInfo::from(res);
+		let exec = crate::cel::Executor::new_mcp_request(cel.0.as_ref(), &mcp);
+		self
+			.direct_response
+			.iter()
+			.find(|rule| exec.eval_bool(rule.when.as_ref()))
+			.map(|rule| rule.respond.clone())
 	}
 
 	pub fn register(&self, cel: &mut ContextBuilder) {
-		self.0.register(cel);
+		self.rule_sets.register(cel);
+		for rule in &self.direct_response {
+			cel.register_expression(rule.when.as_ref());
+		}
 	}
 }
 

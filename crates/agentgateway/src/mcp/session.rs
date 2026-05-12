@@ -19,8 +19,10 @@ use sse_stream::{KeepAlive, Sse, SseBody, SseStream};
 use tokio::sync::mpsc::{Receiver, Sender};
 
 use crate::http::Response;
+use crate::mcp::direct_response::DirectResponse as McpDirectResponse;
 use crate::mcp::handler::{Relay, RelayInputs};
 use crate::mcp::mergestream::Messages;
+use crate::mcp::rbac::McpDecision;
 use crate::mcp::streamablehttp::{ServerSseMessage, StreamableHttpPostResponse};
 use crate::mcp::upstream::{IncomingRequestContext, UpstreamError};
 use crate::mcp::{ClientError, rbac};
@@ -45,6 +47,11 @@ struct SessionEntry {
 }
 
 const SESSION_REAP_INTERVAL: Duration = Duration::from_secs(30);
+
+struct PromptAuthAllow<'a, 'b> {
+	service_name: &'a str,
+	prompt: &'b str,
+}
 
 impl Session {
 	/// send a message to upstream server(s)
@@ -146,25 +153,28 @@ impl Session {
 		span: &mut SpanWriteOnDrop,
 		log: &AsyncLog<mcp::MCPInfo>,
 		cel: &rbac::CelExecWrapper,
-	) -> Result<(&'a str, &'b str), UpstreamError> {
+	) -> Result<PromptAuthAllow<'a, 'b>, UpstreamError> {
 		let (service_name, prompt) = self.relay.parse_resource_name(name)?;
 		span.rename_span(format!("{method} {service_name}"));
 		log.non_atomic_mutate(|l| {
 			l.set_prompt(service_name.to_string(), prompt.to_string());
 		});
-		if !self.relay.policies.validate(
+		match self.relay.policies.evaluate(
 			&rbac::ResourceType::Prompt(rbac::ResourceId::new(
 				service_name.to_string(),
 				prompt.to_string(),
 			)),
 			cel,
 		) {
-			return Err(UpstreamError::Authorization {
+			McpDecision::Allow => Ok(PromptAuthAllow {
+				service_name,
+				prompt,
+			}),
+			McpDecision::Deny => Err(UpstreamError::Authorization {
 				resource_type: "prompt".to_string(),
 				resource_name: name.to_string(),
-			});
+			}),
 		}
-		Ok((service_name, prompt))
 	}
 
 	fn authorize_resource_request(
@@ -180,19 +190,19 @@ impl Session {
 		log.non_atomic_mutate(|l| {
 			l.set_resource(service_name.to_string(), uri.to_string());
 		});
-		if !self.relay.policies.validate(
+		match self.relay.policies.evaluate(
 			&rbac::ResourceType::Resource(rbac::ResourceId::new(
 				service_name.to_string(),
 				uri.to_string(),
 			)),
 			cel,
 		) {
-			return Err(UpstreamError::Authorization {
+			McpDecision::Allow => Ok(()),
+			McpDecision::Deny => Err(UpstreamError::Authorization {
 				resource_type: "resource".to_string(),
 				resource_name: uri.to_string(),
-			});
+			}),
 		}
-		Ok(())
 	}
 
 	/// delete any active sessions
@@ -431,17 +441,21 @@ impl Session {
 							l.set_tool(service_name.to_string(), tool.to_string());
 							l.capture_call_arguments(call_arguments);
 						});
-						if !self.relay.policies.validate(
-							&rbac::ResourceType::Tool(rbac::ResourceId::new(
-								service_name.to_string(),
-								tool.to_string(),
-							)),
-							&cel,
-						) {
-							return Err(UpstreamError::Authorization {
-								resource_type: "tool".to_string(),
-								resource_name: name.to_string(),
-							});
+						let res = rbac::ResourceType::Tool(rbac::ResourceId::new(
+							service_name.to_string(),
+							tool.to_string(),
+						));
+						if let Some(dr) = self.relay.policies.direct_response_for_tool(&res, &cel) {
+							return Ok(direct_response_to_http(dr, r.id.clone()));
+						}
+						match self.relay.policies.evaluate(&res, &cel) {
+							McpDecision::Allow => {},
+							McpDecision::Deny => {
+								return Err(UpstreamError::Authorization {
+									resource_type: "tool".to_string(),
+									resource_name: name.to_string(),
+								});
+							},
 						}
 
 						let tn = tool.to_string();
@@ -453,8 +467,10 @@ impl Session {
 					},
 					ClientRequest::GetPromptRequest(gpr) => {
 						let name = gpr.params.name.clone();
-						let (service_name, prompt) =
-							self.authorize_prompt_request(&name, &method, &mut span, &log, &cel)?;
+						let PromptAuthAllow {
+							service_name,
+							prompt,
+						} = self.authorize_prompt_request(&name, &method, &mut span, &log, &cel)?;
 						gpr.params.name = prompt.to_string();
 						self.relay.send_single(r, ctx, service_name, None).await
 					},
@@ -512,8 +528,10 @@ impl Session {
 					ClientRequest::CompleteRequest(cr) => match &cr.params.r#ref {
 						Reference::Prompt(prompt) => {
 							let name = prompt.name.clone();
-							let (service_name, prompt_name) =
-								self.authorize_prompt_request(&name, &method, &mut span, &log, &cel)?;
+							let PromptAuthAllow {
+								service_name,
+								prompt: prompt_name,
+							} = self.authorize_prompt_request(&name, &method, &mut span, &log, &cel)?;
 							cr.params.r#ref = Reference::for_prompt(prompt_name.to_string());
 							self.relay.send_single(r, ctx, service_name, None).await
 						},
@@ -777,6 +795,17 @@ impl Drop for SessionDropper {
 		sm.remove(s.id.as_ref());
 		tokio::task::spawn(async move { s.delete_session(parts).await });
 	}
+}
+
+/// Wrap a single JSON-RPC reply as the body of an SSE response. Reuses the
+/// same transport shape that upstream replies use, so downstream clients see
+/// a uniform format whether the reply was synthetic or proxied.
+fn direct_response_to_http(dr: McpDirectResponse, req_id: RequestId) -> Response {
+	let msg = ServerSseMessage {
+		event_id: None,
+		message: Arc::new(dr.apply(req_id)),
+	};
+	sse_stream_response(futures_util::stream::once(async move { msg }), None)
 }
 
 pub(crate) fn sse_stream_response(

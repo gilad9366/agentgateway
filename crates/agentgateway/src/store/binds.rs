@@ -942,6 +942,7 @@ impl Store {
 			.chain(rules);
 
 		let mut mcp_authz = Vec::new();
+		let mut mcp_direct_response = Vec::new();
 		let mut pol = BackendPolicies::default();
 		for rule in rules {
 			match &rule {
@@ -999,15 +1000,18 @@ impl Store {
 				},
 				BackendTrafficPolicy::McpAuthorization(p) => {
 					// Authorization policies merge, unlike others
-					mcp_authz.push(p.clone().into_inner());
+					let (rule_set, dr) = p.clone().into_parts();
+					mcp_authz.push(rule_set);
+					mcp_direct_response.extend(dr);
 				},
 				BackendTrafficPolicy::McpAuthentication(p) => {
 					pol.mcp_authentication.get_or_insert_with(|| p.clone());
 				},
 			}
 		}
-		if !mcp_authz.is_empty() {
-			pol.mcp_authorization = Some(McpAuthorizationSet::new(mcp_authz.into()));
+		if !mcp_authz.is_empty() || !mcp_direct_response.is_empty() {
+			pol.mcp_authorization =
+				Some(McpAuthorizationSet::new(mcp_authz.into()).with_direct_response(mcp_direct_response));
 		}
 		pol
 	}

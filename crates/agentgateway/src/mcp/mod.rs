@@ -1,4 +1,5 @@
 pub(crate) mod auth;
+pub(crate) mod direct_response;
 mod handler;
 mod mergestream;
 mod rbac;
@@ -15,7 +16,7 @@ use std::time::Duration;
 
 use axum_core::BoxError;
 use prometheus_client::encoding::{EncodeLabelValue, LabelValueEncoder};
-pub use rbac::{McpAuthorization, McpAuthorizationSet, ResourceId, ResourceType};
+pub use rbac::{McpAuthorization, McpAuthorizationSet, McpDecision, ResourceId, ResourceType};
 use rmcp::model::RequestId;
 pub use router::App;
 use serde::{Deserialize, Serialize};

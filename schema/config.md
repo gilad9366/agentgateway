@@ -155,6 +155,33 @@
 |`binds[].listeners[].routes[].policies.cors.maxAge`|string||
 |`binds[].listeners[].routes[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`binds[].listeners[].routes[].policies.mcpAuthorization.rules`|[]string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse`|[]object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].when`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`binds[].listeners[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`binds[].listeners[].routes[].policies.authorization`|object|Authorization policies for HTTP access.|
 |`binds[].listeners[].routes[].policies.authorization.rules`|[]string||
 |`binds[].listeners[].routes[].policies.mcpAuthentication`|object|Authentication for MCP clients.|
@@ -2159,6 +2186,33 @@
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.backendTunnel.proxy.backend`|string|Explicit backend reference. Backend must be defined in the top level backends list|
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.rules`|[]string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse`|[]object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].when`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`binds[].listeners[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`binds[].listeners[].routes[].backends[].mcp.statefulMode`|enum|Possible values: `stateless`, `stateful`.|
 |`binds[].listeners[].routes[].backends[].mcp.prefixMode`|enum|Possible values: `always`, `conditional`, `null`.|
 |`binds[].listeners[].routes[].backends[].mcp.failureMode`|enum|Behavior when one or more MCP targets fail to initialize or fail during fanout.<br>Defaults to `failClosed`.<br>Possible values: `failClosed`, `failOpen`.|
@@ -2458,6 +2512,33 @@
 |`binds[].listeners[].routes[].backends[].ai.policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.rules`|[]string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse`|[]object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].when`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`binds[].listeners[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`binds[].listeners[].routes[].backends[].ai.policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`binds[].listeners[].routes[].backends[].ai.policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`binds[].listeners[].routes[].backends[].ai.policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -3625,6 +3706,33 @@
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.rules`|[]string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse`|[]object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].when`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`binds[].listeners[].routes[].backends[].ai.groups[].providers[].policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -4767,6 +4875,33 @@
 |`binds[].listeners[].routes[].backends[].policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`binds[].listeners[].routes[].backends[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.rules`|[]string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse`|[]object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].when`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`binds[].listeners[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`binds[].listeners[].routes[].backends[].policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`binds[].listeners[].routes[].backends[].policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`binds[].listeners[].routes[].backends[].policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -6666,6 +6801,33 @@
 |`policies[].policy.cors.maxAge`|string||
 |`policies[].policy.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`policies[].policy.mcpAuthorization.rules`|[]string||
+|`policies[].policy.mcpAuthorization.directResponse`|[]object||
+|`policies[].policy.mcpAuthorization.directResponse[].when`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`policies[].policy.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`policies[].policy.authorization`|object|Authorization policies for HTTP access.|
 |`policies[].policy.authorization.rules`|[]string||
 |`policies[].policy.mcpAuthentication`|object|Authentication for MCP clients.|
@@ -8665,6 +8827,33 @@
 |`backends[].mcp.targets[].policies.backendTunnel.proxy.backend`|string|Explicit backend reference. Backend must be defined in the top level backends list|
 |`backends[].mcp.targets[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`backends[].mcp.targets[].policies.mcpAuthorization.rules`|[]string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse`|[]object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].when`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`backends[].mcp.statefulMode`|enum|Possible values: `stateless`, `stateful`.|
 |`backends[].mcp.prefixMode`|enum|Possible values: `always`, `conditional`, `null`.|
 |`backends[].mcp.failureMode`|enum|Behavior when one or more MCP targets fail to initialize or fail during fanout.<br>Defaults to `failClosed`.<br>Possible values: `failClosed`, `failOpen`.|
@@ -8964,6 +9153,33 @@
 |`backends[].ai.policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`backends[].ai.policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`backends[].ai.policies.mcpAuthorization.rules`|[]string||
+|`backends[].ai.policies.mcpAuthorization.directResponse`|[]object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].when`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`backends[].ai.policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`backends[].ai.policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`backends[].ai.policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -10131,6 +10347,33 @@
 |`backends[].ai.groups[].providers[].policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`backends[].ai.groups[].providers[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`backends[].ai.groups[].providers[].policies.mcpAuthorization.rules`|[]string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse`|[]object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].when`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`backends[].ai.groups[].providers[].policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`backends[].ai.groups[].providers[].policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`backends[].ai.groups[].providers[].policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -11272,6 +11515,33 @@
 |`backends[].policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`backends[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`backends[].policies.mcpAuthorization.rules`|[]string||
+|`backends[].policies.mcpAuthorization.directResponse`|[]object||
+|`backends[].policies.mcpAuthorization.directResponse[].when`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`backends[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`backends[].policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`backends[].policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`backends[].policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -12218,6 +12488,33 @@
 |`routeGroups[].routes[].policies.cors.maxAge`|string||
 |`routeGroups[].routes[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`routeGroups[].routes[].policies.mcpAuthorization.rules`|[]string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse`|[]object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].when`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`routeGroups[].routes[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`routeGroups[].routes[].policies.authorization`|object|Authorization policies for HTTP access.|
 |`routeGroups[].routes[].policies.authorization.rules`|[]string||
 |`routeGroups[].routes[].policies.mcpAuthentication`|object|Authentication for MCP clients.|
@@ -14222,6 +14519,33 @@
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.backendTunnel.proxy.backend`|string|Explicit backend reference. Backend must be defined in the top level backends list|
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.rules`|[]string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse`|[]object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].when`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`routeGroups[].routes[].backends[].mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`routeGroups[].routes[].backends[].mcp.statefulMode`|enum|Possible values: `stateless`, `stateful`.|
 |`routeGroups[].routes[].backends[].mcp.prefixMode`|enum|Possible values: `always`, `conditional`, `null`.|
 |`routeGroups[].routes[].backends[].mcp.failureMode`|enum|Behavior when one or more MCP targets fail to initialize or fail during fanout.<br>Defaults to `failClosed`.<br>Possible values: `failClosed`, `failOpen`.|
@@ -14521,6 +14845,33 @@
 |`routeGroups[].routes[].backends[].ai.policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.rules`|[]string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse`|[]object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].when`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`routeGroups[].routes[].backends[].ai.policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`routeGroups[].routes[].backends[].ai.policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`routeGroups[].routes[].backends[].ai.policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`routeGroups[].routes[].backends[].ai.policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -15688,6 +16039,33 @@
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.rules`|[]string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse`|[]object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].when`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`routeGroups[].routes[].backends[].ai.groups[].providers[].policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -16830,6 +17208,33 @@
 |`routeGroups[].routes[].backends[].policies.extAuthz.cache.maxEntries`|integer|Maximum number of authorization results to keep in the cache.|
 |`routeGroups[].routes[].backends[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`routeGroups[].routes[].backends[].policies.mcpAuthorization.rules`|[]string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse`|[]object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].when`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`routeGroups[].routes[].backends[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`routeGroups[].routes[].backends[].policies.a2a`|object|Mark this traffic as A2A to enable A2A processing and telemetry.|
 |`routeGroups[].routes[].backends[].policies.inferenceRouting`|object|Route requests through an endpoint picker before forwarding to the selected backend.|
 |`routeGroups[].routes[].backends[].policies.inferenceRouting.endpointPicker`|object|Exactly one of service, host, or backend may be set.|
@@ -19557,6 +19962,33 @@
 |`mcp.targets[].policies.backendTunnel.proxy.backend`|string|Explicit backend reference. Backend must be defined in the top level backends list|
 |`mcp.targets[].policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`mcp.targets[].policies.mcpAuthorization.rules`|[]string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse`|[]object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].when`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`mcp.targets[].policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`mcp.statefulMode`|enum|Possible values: `stateless`, `stateful`.|
 |`mcp.prefixMode`|enum|Possible values: `always`, `conditional`, `null`.|
 |`mcp.failureMode`|enum|Behavior when one or more MCP targets fail to initialize or fail during fanout.<br>Defaults to `failClosed`.<br>Possible values: `failClosed`, `failOpen`.|
@@ -19613,6 +20045,33 @@
 |`mcp.policies.cors.maxAge`|string||
 |`mcp.policies.mcpAuthorization`|object|Authorization policies for MCP access.|
 |`mcp.policies.mcpAuthorization.rules`|[]string||
+|`mcp.policies.mcpAuthorization.directResponse`|[]object||
+|`mcp.policies.mcpAuthorization.directResponse[].when`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content`|[]object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.text`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.priority`|number||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.annotations.lastModified`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].text.meta`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.uri`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.name`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.title`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.description`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.mimeType`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.size`|integer||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.audience`|[]enum|Possible values: `user`, `assistant`.|
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.priority`|number||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.annotations.lastModified`|string||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.content[].resourceLink.meta`|object||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.isError`|boolean||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.structuredContent`|any||
+|`mcp.policies.mcpAuthorization.directResponse[].respond.callTool.meta`|object||
 |`mcp.policies.authorization`|object|Authorization policies for HTTP access.|
 |`mcp.policies.authorization.rules`|[]string||
 |`mcp.policies.mcpAuthentication`|object|Authentication for MCP clients.|

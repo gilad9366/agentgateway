@@ -1392,6 +1392,83 @@ func (this *BackendPolicySpec_McpAuthorization) UnmarshalJSON(b []byte) error {
 	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_Annotations
+func (this *BackendPolicySpec_McpAuthorization_Annotations) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_Annotations
+func (this *BackendPolicySpec_McpAuthorization_Annotations) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_TextContent
+func (this *BackendPolicySpec_McpAuthorization_TextContent) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_TextContent
+func (this *BackendPolicySpec_McpAuthorization_TextContent) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_ResourceLink
+func (this *BackendPolicySpec_McpAuthorization_ResourceLink) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_ResourceLink
+func (this *BackendPolicySpec_McpAuthorization_ResourceLink) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_ContentBlock
+func (this *BackendPolicySpec_McpAuthorization_ContentBlock) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_ContentBlock
+func (this *BackendPolicySpec_McpAuthorization_ContentBlock) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_CallToolResult
+func (this *BackendPolicySpec_McpAuthorization_CallToolResult) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_CallToolResult
+func (this *BackendPolicySpec_McpAuthorization_CallToolResult) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_DirectResponse
+func (this *BackendPolicySpec_McpAuthorization_DirectResponse) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_DirectResponse
+func (this *BackendPolicySpec_McpAuthorization_DirectResponse) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
+// MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthorization_DirectResponseRule
+func (this *BackendPolicySpec_McpAuthorization_DirectResponseRule) MarshalJSON() ([]byte, error) {
+	str, err := ResourceMarshaler.MarshalToString(this)
+	return []byte(str), err
+}
+
+// UnmarshalJSON is a custom unmarshaler for BackendPolicySpec_McpAuthorization_DirectResponseRule
+func (this *BackendPolicySpec_McpAuthorization_DirectResponseRule) UnmarshalJSON(b []byte) error {
+	return ResourceUnmarshaler.Unmarshal(bytes.NewReader(b), this)
+}
+
 // MarshalJSON is a custom marshaler for BackendPolicySpec_McpAuthentication
 func (this *BackendPolicySpec_McpAuthentication) MarshalJSON() ([]byte, error) {
 	str, err := ResourceMarshaler.MarshalToString(this)
